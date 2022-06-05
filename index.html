@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+         
+            $("#pop").hide();
+          
+        });
+        $(document).ready(function(){
+          $("#btn").click(function(){
+            $("#pop").show();
+          });
+        });
+        </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -11,6 +30,94 @@
     <p>This is paragraph</p>
     <p>hiii</p>
     <p>hi</p>
+    <p>hii</p>
+    
+    <button type="button" class="btn btn-success" id="btn">button</button>
+    
+    <div class="alert alert-primary alert-dismissible fade show" role="alert" id="pop">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <strong>Alert Heading</strong> Alert Content
+    </div>
+    
+    <script>
+      var alertList = document.querySelectorAll('.alert');
+      alertList.forEach(function (alert) {
+        new bootstrap.Alert(alert)
+      })
+    </script>
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modelId">
+      Launch
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              Add rows here
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      var modelId = document.getElementById('modelId');
+    
+      modelId.addEventListener('show.bs.modal', function (event) {
+          // Button that triggered the modal
+          let button = event.relatedTarget;
+          // Extract info from data-bs-* attributes
+          let recipient = button.getAttribute('data-bs-whatever');
+    
+        // Use above variables to manipulate the DOM
+      });
+    </script>
+    <div class="container-fluid">
+      
+  
+    <div class="row">
+      <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="holder.js/100x180/" alt="Title">
+      <div class="card-body">
+        <h4 class="card-title">Title</h4>
+        <p class="card-text">Text</p>
+      </div>
+    </div>
+    </div>
+    
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="holder.js/100x180/" alt="Title">
+          <div class="card-body">
+            <h3 class="card-title">Title</h3>
+            <p class="card-text">Text</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="holder.js/100x180/" alt="Title">
+          <div class="card-body">
+            <h3 class="card-title">Title</h3>
+            <p class="card-text">Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusantium dicta dolores non, odio veritatis laudantium! Illum facilis saepe, necessitatibus minus accusantium architecto quo quis iste delectus nulla dolorem eos?</p>
 </body>
 </html>
